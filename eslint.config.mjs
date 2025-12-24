@@ -6,6 +6,7 @@ import tseslint from "typescript-eslint";
 import { defineConfig, globalIgnores } from "eslint/config";
 import eslintPluginPrettier from "eslint-plugin-prettier";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
+import pluginQuery from "@tanstack/eslint-plugin-query";
 import importPlugin from "eslint-plugin-import";
 
 export default defineConfig([
@@ -20,6 +21,7 @@ export default defineConfig([
             reactRefresh.configs.vite,
 
             eslintConfigPrettier,
+            pluginQuery.configs["flat/recommended"],
         ],
         languageOptions: {
             ecmaVersion: 2020,
